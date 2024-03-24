@@ -13,6 +13,8 @@ import nltk
 import re
 from youtube_transcript_api import YouTubeTranscriptApi
 
+api_key=api_key
+
 def summarize(link):
     prompt_template = '''Question: Write a summary of the following youtube video transcript in English in 300 words. Remember to give the answer in 1 paragraph.
     Transcript : "{transcript}" 
