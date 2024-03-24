@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SummarizerGPT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c1fe2389a9.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='home.css')}}">
+</head>
+<body>
+    <main>
+        <div id="nav">
+           <div id="logo">
+                <h1 class="rubik-moonrocks-regular">SummarizerGPT</h1>
+           </div>
+           <div id="options">
+            <input type="radio" name="option" id="option1" checked>
+            <label onclick="redirectToHome()" for="option1" class="first"><span id="menu">YouTube Summarizer</span><span id="arrow">&gt;</span></label>
+            <input type="radio" name="option" id="option2">
+            <label onclick="redirectToChat()" for="option2" class="last"><span id="menu">HR's Assistant</span><span id="arrow">&gt;</span></label>
+           </div>
+        </div>
+        <div id="content" class="telex-regular">
+            <div id="row1">
+                <label for="link">I will summarize the YouTube video for you. Paste the link of your choice !</label>
+                <form action="/home" method="POST">
+                    <div id="searchbar">
+                        <input type="text" name="link" id="link" placeholder="https://www.youtube.com/watch?v=nV4vZo6A-Ak">
+                        <button type="submit">Generate Summary</button>
+                    </div>
+                </form>
+            </div>
+            <div id="row2">
+                <h6>Summary (in 100 words):</h6>
+                <p>{{summary}}</p>
+            </div>
+            <div id="row3">
+                <div id="youtube-video">
+                    <iframe width="100%" src="https://www.youtube.com/embed/{{link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div id="channel-details">
+                    <img src={{image}} alt="">
+                    <h6>{{channel_name}}</h6>
+                    <h6>Subscribers: <span id="italic">{{sub}}</span></h6>
+                    <h6>Video's Uploaded: <span id="italic">{{videos}}</span></h6>
+                </div>
+            </div>
+            <div id="row4">
+                <div id="comments">
+                    <i class="fa-solid fa-comments"></i>
+                    <h6>Comments: <span id="italic">{{comment}}</span></h6>
+                </div>
+                <div id="likes">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <h6>Likes: <span id="italic">{{likes}}</span></h6>
+                </div>
+                <div id="dislikes">
+                    <i class="fa-solid fa-eye"></i>
+                    <h6>Views: <span id="italic">{{views}}</span></h6>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        // JavaScript function to redirect to a different website
+        function redirectToHome() {
+            // Redirect to a different website
+            window.location.href ="{{ url_for('home') }}";
+        }
+        function redirectToChat() {
+            // Redirect to a different website
+            window.location.href ="{{ url_for('chat') }}";
+        }
+    </script>    
+</body>
+</html>

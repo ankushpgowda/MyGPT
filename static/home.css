@@ -1,0 +1,273 @@
+* {
+    height: auto;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.rubik-moonrocks-regular {
+    font-family: "Rubik Moonrocks", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    margin: 0%;
+}
+
+main{
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+}
+
+#nav{
+    width: 25%;
+    background-color: black;
+    color: white;
+}
+
+#logo{
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo > h1{
+    margin: 0px;
+    
+}
+
+#options{
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.first{
+    border-top: 2px solid white !important;
+}
+
+.last{
+    border-bottom: 2px solid white !important;
+}
+
+#options > label{
+    height: 60px;
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    transition-duration: 200ms;
+}
+
+#options > input:checked + label{
+    font-size: 1.23em;
+    background-color: white;
+    color: black;
+}
+
+#options > input{
+    display: none;
+}
+
+#menu, #arrow{
+    height: auto;
+    font-size: 1.2em;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+#content{
+    width: 75%;
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+}
+
+#row1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+}
+
+#row1 > label{
+    width: auto;
+    height: auto;
+    font-size: 2.5em;
+    font-weight: 600;
+    text-align: center;
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-top: 3%;
+}
+
+#row1 > form >#searchbar{
+    display: flex;
+    width: auto;
+    height: auto;
+    margin-top: 2%;
+}
+
+#searchbar > input{
+    height: 2.5em;
+    width: 35em;
+    border: 1px solid black;
+    border-radius: 3px 0px 0px 3px;
+    padding-left: 1em;
+}
+
+#searchbar > button{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 0px 3px 3px 0px;
+    margin: 0%;
+}
+
+#row2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 3em;
+    height: auto;
+}
+
+#row2 > h6{
+    font-size: 1.2em;
+    margin: 0px;
+    margin-top: 3%;
+    font-weight: 700;
+    height: auto;
+}
+
+#row2 > p{
+    margin: 0px;
+    margin-top: 1%;
+}
+
+#row3{
+    display: flex;
+    margin-left: 3em;
+    justify-content: space-between;
+    height: 25em;
+    margin-top: 3%;
+}
+
+#row3 > #youtube-video{
+    width: 65%;
+    height: 100%;
+}
+
+#row3 > #youtube-video > iframe{
+    height: 100% !important;
+}
+
+#row3 > #channel-details{
+    width: 30%;
+    height: auto;
+    text-align: center;
+    background-color: #f5f5f5;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    border: 1px solid black;
+}
+
+#row3 > #channel-details > img{
+    height: 11em;
+    width: 80%;
+    
+}
+
+#row3 > #channel-details > h6:nth-of-type(1){
+    height: auto;
+    margin: 0;
+    margin-top: 0.5em;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+#row3 > #channel-details > h6:nth-of-type(2){
+    height: auto;
+    margin: 0;
+    margin-top: 0.5em;
+    font-size: 1.2em;
+}
+
+#row3 > #channel-details > h6:nth-of-type(3){
+    height: auto;
+    margin: 0;
+    margin-top: 0.5em;
+    font-size: 1.2em;
+}
+
+#italic{
+    font-style: italic;
+}
+
+#row4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+    margin-left: 3em;
+    height: 10em;
+}
+
+#row4 > #comments{
+    width: 30%;
+    background-color: #f5f5f5;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#row4 > #likes{
+    width: 30%;
+    background-color: #f5f5f5;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#row4 > #dislikes{
+    width: 30%;
+    background-color: #f5f5f5;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#row4 > #comments > i{
+    font-size: 3em;
+    margin-right: .5em;
+}
+
+#row4 > #comments > h6{
+    font-size: 1.2em;
+}
+
+#row4 > #likes > i{
+    font-size: 3em;
+    margin-right: .5em;
+}
+
+#row4 > #likes > h6{
+    font-size: 1.2em;
+}
+
+#row4 > #dislikes > i{
+    font-size: 3em;
+    margin-right: .5em;
+}
+
+#row4 > #dislikes > h6{
+    font-size: 1.2em;
+}

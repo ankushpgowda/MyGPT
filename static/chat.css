@@ -1,0 +1,274 @@
+* {
+    height: auto;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.rubik-moonrocks-regular {
+    font-family: "Rubik Moonrocks", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    margin: 0%;
+}
+
+main{
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+}
+
+#nav{
+    width: 25%;
+    background-color: black;
+    color: white;
+}
+
+#logo{
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo > h1{
+    margin: 0px;
+    
+}
+
+#options{
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.first{
+    border-top: 2px solid white !important;
+}
+
+.last{
+    border-bottom: 2px solid white !important;
+}
+
+#options > label{
+    height: 60px;
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    transition-duration: 200ms;
+}
+
+#options > input:checked + label{
+    font-size: 1.23em;
+    background-color: white;
+    color: black;
+}
+
+#options > input{
+    display: none;
+}
+
+#menu, #arrow{
+    height: auto;
+    font-size: 1.2em;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+#content{
+    width: 75%;
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+}
+
+#row1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+}
+
+#row1 > h1{
+    width: auto;
+    height: auto;
+    font-size: 2.5em;
+    font-weight: 600;
+    text-align: center;
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-top: 3%;
+}
+
+#row1 > form >#searchbar{
+    display: flex;
+    width: auto;
+    height: auto;
+    margin-top: 2%;
+}
+
+#searchbar > input{
+    height: 2.5em;
+    width: 35em;
+    border: 1px solid black;
+    border-radius: 3px 0px 0px 3px;
+    padding-left: 1em;
+}
+
+#searchbar > button{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 0px 3px 3px 0px;
+    margin: 0%;
+}
+
+#row2 {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: fit-content;
+}
+
+#row2 > #file-uploader{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 18em;
+    text-align: center;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    padding: 2%;
+}
+
+#row2 > #file-uploader > input{
+    display: none;
+}
+
+#row2 > #file-uploader > label{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dotted black;
+}
+
+
+#row2 > #file-uploader > label > h6{
+    margin: 0%;
+    font-size: 1.2em;
+}
+
+#row2 > #file-uploader > label > i{
+    font-size: 2.5em;
+}
+
+#row2 > #file-uploader > button{
+   background-color: black;
+   color: white;
+   border: 1px solid black;
+   height: 2em;
+   font-size: 1.2em;
+}
+
+#row2 > #QA{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+#row2 > #QA > #ask-question{
+    width: 100%;
+    height: 12%;
+    text-align: center;
+    display: flex;
+}
+
+#row2 > #QA > #ask-question > input{
+    width: 85%;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    border-radius: 0;
+    border: 2px solid black;
+    padding-left: 1em;
+}
+
+#row2 > #QA > #ask-question > button{
+    width: 15%;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    font-size: 1.6em;
+    border-radius: 0;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+}
+
+#row2 > #QA > #answer > h6{
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 3%;
+}
+#row2 > #QA > #answer > p{
+    margin: 0;
+    margin-top: 1%;
+}
+
+#row3{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 3%;
+}
+
+#row3 > #details > h6{
+    margin: 0;
+}
+
+#row3 > #details > h6:nth-of-type(1){
+    font-size: 2em;
+    font-weight: 700;
+}
+
+#row3 > #details > h6:nth-of-type(2){
+    font-size: 1.2em;
+    margin-top: 1%;
+}
+#row3 > #details > h6:nth-of-type(3){
+    font-size: 1.2em;
+    margin-top: 1%;
+}
+
+#row3 > #details > h6:nth-of-type(4){
+    font-size: 1.2em;
+    margin-top: 1%;
+    font-weight: 700;
+}
+
+#row3 > #details > h6:nth-of-type(5){
+    font-size: 1.2em;
+    margin-top: 1%;
+    font-weight: 700;
+}
+
+#row3 > #details > p{
+    white-space: pre-line;
+}
+
+#bold{
+    font-weight: 700;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SummarizerGPT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c1fe2389a9.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='chat.css')}}">
+</head>
+<body>
+    <main>
+        <div id="nav">
+           <div id="logo">
+                <h1 class="rubik-moonrocks-regular">SummarizerGPT</h1>
+           </div>
+           <div id="options">
+            <input type="radio" name="option" id="option1">
+            <label onclick="redirectToHome()" for="option1" class="first"><span id="menu">YouTube Summarizer</span><span id="arrow">&gt;</span></label>
+            <input type="radio" name="option" id="option2" checked>
+            <label onclick="redirectToChat()" for="option2" class="last"><span id="menu">HR's Assistant</span><span id="arrow">&gt;</span></label>
+           </div>
+        </div>
+        <div id="content" class="telex-regular">
+            <div id="row1">
+                <h1>Upload a PDF and ask questions. I will provide you the answers &#128522;</h1>
+            </div>
+            <div id="row2">
+                <form action="/chat" id="file-uploader" method="POST" enctype="multipart/form-data">
+                    <label for="myfile" id="change">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <h6>Click here to upload PDF</h6>
+                    </label>
+                    <input type="file" id="myfile" name="file" accept=".pdf" onchange="updateFileName(this)">
+                    <button type="submit">Upload File</button>
+                </form>
+                <div id="QA">
+                    <form action="/chat" id="ask-question" method="GET">
+                        <input type="text" id="myfile" name="question" placeholder="Ask me question !">
+                        <button type="submit"><i class="fa-solid fa-circle-arrow-right"></i></button>
+                    </form>
+                    <div id="answer">
+                        <h6>Answer:</h6>
+                        <p>{{answer}}</p>
+                    </div>
+                </div>
+            </div>    
+            <div id="row3">
+                <div id="details">
+                    <h6>Candidate Name: {{cad_name}}</h6>
+                    <h6> <span id="bold">Email: </span>{{mail}}</h6>
+                    <h6> <span id="bold">Phone Number: </span> {{no}}</h6>
+                    <h6>Summary: </h6>
+                    <p>{{summary}}</p>
+                    <h6>Key Points: </h6>
+                    <p>{{key_points}}</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        // JavaScript function to redirect to a different website
+        function redirectToHome() {
+            // Redirect to a different website
+            window.location.href ="{{ url_for('home') }}";
+        }
+        function redirectToChat() {
+            // Redirect to a different website
+            window.location.href ="{{ url_for('chat') }}";
+        }
+
+        function updateFileName(input) {
+            var fileLabel = document.getElementById("change");
+            if (input.files.length > 0) {
+                fileLabel.textContent = input.files[0].name;
+            } else {
+                fileLabel.textContent = "Click here to upload PDF";
+            }
+        }
+
+    </script>    
+</body>
+</html>
