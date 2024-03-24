@@ -13,10 +13,6 @@ import nltk
 import re
 from youtube_transcript_api import YouTubeTranscriptApi
 
-os.environ["OPENAI_API_KEY"] = getpass.getpass(prompt="Enter your OpenAI API key: ")
-#api_key = 'AIzaSyCJayaCxJU5S3EqHI-RQPZcTvPxn0x3Ulk'
-api_key = getpass.getpass(prompt="Enter your Youtube API key: ")
-
 def summarize(link):
     prompt_template = '''Question: Write a summary of the following youtube video transcript in English in 300 words. Remember to give the answer in 1 paragraph.
     Transcript : "{transcript}" 
