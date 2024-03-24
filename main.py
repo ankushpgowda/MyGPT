@@ -17,6 +17,7 @@ def get_video_id(link):
         match = re.search(r"(?:[?&]v=|\/embed\/)([^#\?]*)", link)
         return match.group(1) if match else None
 
+@app.route("/")
 @app.route("/home", methods=['POST', 'GET'])
 def home():
     summary = pro_link = channel_name = likes = views = comment = channel_id = image = sub = videos = ""
