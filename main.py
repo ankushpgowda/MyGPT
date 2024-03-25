@@ -32,11 +32,10 @@ def home():
 
 @app.route('/chat', methods=['POST', 'GET'])  
 def chat():
-    global cad_name, mail,  no, summary, key_points
+    global cad_name, mail,  no, summary, key_points, file_path
     if request.method == 'POST' and 'file' in request.files:
         file = request.files['file']
         filename = file.filename
-        global file_path
         file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         file.save(file_path)
         cad_name, mail,  no, summary, key_points = basic_info(file_path)
