@@ -20,6 +20,8 @@ def get_video_id(link):
 @app.route("/")
 @app.route("/home", methods=['POST', 'GET'])
 def home():
+    global cad_name, mail,  no, summary, key_points
+    global file_path
     file_path = ""
     cad_name= mail=  no= summary= key_points = ""
     summary = pro_link = channel_name = likes = views = comment = channel_id = image = sub = videos = ""
