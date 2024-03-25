@@ -31,7 +31,6 @@ def home():
     return render_template("home.html", summary=summary, link=pro_link, channel_name=channel_name, likes=likes, views=views, comment=comment, image=image, sub=sub, videos=videos)
 
 @app.route('/chat', methods=['POST', 'GET'])  
-@app.route('/chatnew', methods=['POST', 'GET'])  
 def chat():
     global cad_name, mail,  no, summary, key_points, file_path
     if request.method == 'POST' and 'file' in request.files:
